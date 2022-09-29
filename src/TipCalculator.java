@@ -15,7 +15,7 @@ public class TipCalculator {
         System.out.print("What is the tip percentage, (0-100): ");
         int tip = scan.nextInt();
 
-        //initilizaes and sets variables
+        //initializes and sets variables
         double totalBill = 0;
         double cost = 0;
 
@@ -25,9 +25,9 @@ public class TipCalculator {
             cost = scan.nextDouble();
             totalBill += cost;
         }
-        totalBill ++;
+        totalBill ++; // adds 1 to negate the -1 that was added
 
-        String roundedTotalBill = formatter.format(totalBill);
+        String roundedTotalBill = formatter.format(totalBill); //rounds the totalBill
 
         double totalTip = totalBill * ((double) tip / 100); // the total tip gets added and rounded in the next line
         String roundedTotalTip = formatter.format(totalTip);
